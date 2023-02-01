@@ -1,6 +1,5 @@
 package rotateMatrix;
 
-import java.util.Arrays;
 import CtCILibrary.CtCILibrary.AssortedMethods;
 
 public class Question {
