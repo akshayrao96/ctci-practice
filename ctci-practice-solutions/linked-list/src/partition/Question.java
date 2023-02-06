@@ -5,29 +5,23 @@ import CtCILibrary.CtCILibrary.LinkedListNode;
 public class Question {
 
     public static LinkedListNode partition(LinkedListNode n, int val) {
-        LinkedListNode left = new LinkedListNode(-1);
-        LinkedListNode leftPtr = left;
+        LinkedListNode left = new LinkedListNode();
+        LinkedListNode leftItr = left;
+        LinkedListNode right = new LinkedListNode();
+        LinkedListNode rightItr = right;
 
-        LinkedListNode right = new LinkedListNode(-1);
-        LinkedListNode rightPtr = right;
-
-
-        LinkedListNode temp = new LinkedListNode(-1);
-        temp.next = n;
-
-        LinkedListNode p1 = temp;
-
-        while (temp.next != null) {
-            temp = temp.next;
-            if (temp.data < val) {
-                leftPtr.next = new LinkedListNode(temp.data);
-                leftPtr = leftPtr.next;
+        while (n != null) {
+            if (n.data < val) {
+                leftItr.next = n;
+                leftItr = leftItr.next;
             } else {
-                rightPtr.next = new LinkedListNode(temp.data);
-                rightPtr = rightPtr.next;
+                rightItr.next = n;
+                rightItr = rightItr.next;
             }
+            n = n.next;
         }
-        leftPtr.next = right.next;
+        leftItr.next = right.next;
+        rightItr.next = null;
         return left.next;
     }
 
