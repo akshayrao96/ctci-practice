@@ -4,13 +4,38 @@ import CtCILibrary.CtCILibrary.LinkedListNode;
 
 public class Question {
 
+    public static boolean palindromeV2(LinkedListNode head) {
+        if (head == null || head.next == null) return true;
+        LinkedListNode fast = head;
+        LinkedListNode slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        LinkedListNode prev = null;
+        LinkedListNode curr = slow;
+        while (curr != null) {
+            LinkedListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        LinkedListNode start = head;
+        while (start != null && prev != null) {
+            if (start.data != prev.data) return false;
+            start = start.next;
+            prev = prev.next;
+        }
+        return true;
+    }
+
     public static boolean palindrome(LinkedListNode head) {
         if (head == null || head.next == null) return true;
         LinkedListNode reverse = reverseLinkedList(head);
         return checkEquals(head, reverse);
     }
 
-    public static LinkedListNode reverseLinkedList(LinkedListNode node) {
+    private static LinkedListNode reverseLinkedList(LinkedListNode node) {
         LinkedListNode head = null;
         while (node != null) {
             LinkedListNode n = new LinkedListNode(node.data);
@@ -21,7 +46,7 @@ public class Question {
         return head;
     }
 
-    public static boolean checkEquals(LinkedListNode n1, LinkedListNode n2) {
+    private static boolean checkEquals(LinkedListNode n1, LinkedListNode n2) {
         while (n1 != null && n2 != null) {
             if (n1.data != n2.data) return false;
             n1 = n1.next;
