@@ -1,5 +1,6 @@
 package loopDetection;
 
+import CtCILibrary.CtCILibrary.AssortedMethods;
 import CtCILibrary.CtCILibrary.LinkedListNode;
 
 import java.util.HashSet;
@@ -22,6 +23,21 @@ public class Question {
         return result;
     }
 
+    public static LinkedListNode loopDetectionV2(LinkedListNode n) {
+        LinkedListNode fast = n;
+        LinkedListNode slow = n;
+        do {
+            fast = fast.next.next;
+            slow = slow.next;
+        } while (!fast.equals(slow));
+        slow = n;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
+
     public static void main(String[] args) {
         int list_length = 100;
         int k = 10;
@@ -34,8 +50,7 @@ public class Question {
 
         // Create loop;
         nodes[list_length - 1].next = nodes[list_length - k];
-
-        LinkedListNode loop = loopDetection(nodes[0]);
+        LinkedListNode loop = loopDetectionV2(nodes[91]);
         if (loop == null) {
             System.out.println("No Cycle.");
         } else {
