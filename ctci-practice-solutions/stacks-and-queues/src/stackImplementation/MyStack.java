@@ -11,6 +11,12 @@ public class MyStack<T> {
         }
     }
     private StackNode<T> top;
+    private int size;
+
+    public MyStack() {
+        this.size = 0;
+        this.top = null;
+    }
 
     public T pop() {
         if (top == null) throw new EmptyStackException();
@@ -32,5 +38,9 @@ public class MyStack<T> {
 
     public boolean isEmpty() {
         return top == null;
+    }
+
+    public int size() {
+        return this.size;
     }
 }
