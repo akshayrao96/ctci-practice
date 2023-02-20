@@ -13,7 +13,7 @@ public class Question {
         if (root != null && root.left == null && root.right == null) {
             height += 1;
         }
-        return checkBalanced(root.left)
+        return checkBalanced(root.left);
     }
 
     public static void main(String[] args) {
