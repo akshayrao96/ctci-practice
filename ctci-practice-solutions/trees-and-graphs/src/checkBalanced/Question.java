@@ -1,7 +1,6 @@
 package checkBalanced;
 
 import CtCILibrary.CtCILibrary.TreeNode;
-import node.BinaryTreeNode;
 
 public class Question {
 

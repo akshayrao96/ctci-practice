@@ -1,4 +1,4 @@
-package routeBetweenNodes;
+package graph;
 
 public class Node<T> {
 
