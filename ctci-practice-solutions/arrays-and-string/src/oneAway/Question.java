@@ -9,11 +9,13 @@ Can do following : insert, remove, replace
 public class Question {
 
   public static boolean oneAway(String s, String a) {
-    if (s.equals(a))
+    if (s.equals(a)) {
       return true;
+    }
     int longest = Math.max(s.length(), a.length());
-    if (longest - s.length() > 1 || longest - a.length() > 1)
+    if (longest - s.length() > 1 || longest - a.length() > 1) {
       return false;
+    }
 
     int[][] arr = new int[s.length() + 1][a.length() + 1];
     for (int i = 0; i < s.length() + 1; i++) {

@@ -34,8 +34,9 @@ public class Question {
       if (freqMap.get(character) % 2 != 0) {
         allowed -= 1;
       }
-      if (allowed < 0)
+      if (allowed < 0) {
         return false;
+      }
     }
     return true;
   }

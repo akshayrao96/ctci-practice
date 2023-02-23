@@ -4,33 +4,37 @@ import CtCILibrary.CtCILibrary.TreeNode;
 
 public class Question {
 
-    public static boolean checkBalanced(TreeNode root) {
-        if (root == null) return true;
-        if (checkBalanced(root.left) && checkBalanced(root.right)) {
-            return Math.abs(getHeight(root.left) - getHeight(root.right)) <= 1;
-        } else {
-            return false;
-        }
+  public static boolean checkBalanced(TreeNode root) {
+    if (root == null) {
+      return true;
     }
-
-    private static int getHeight(TreeNode root) {
-        if (root == null) return 0;
-        return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+    if (checkBalanced(root.left) && checkBalanced(root.right)) {
+      return Math.abs(getHeight(root.left) - getHeight(root.right)) <= 1;
+    } else {
+      return false;
     }
+  }
 
-    public static void main(String[] args) {
-        TreeNode root = new TreeNode(5);
-        root.left = new TreeNode(3);
-        root.left.left = new TreeNode(1);
-        root.left.right = new TreeNode(4);
-        root.right = new TreeNode(8);
-        root.right.left = new TreeNode(7);
-        root.right.right = new TreeNode(10);
-        root.right.left.left = new TreeNode(15);
-        root.right.left.left.left = new TreeNode(20);
-
-        System.out.println(checkBalanced(root));
+  private static int getHeight(TreeNode root) {
+    if (root == null) {
+      return 0;
     }
+    return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+  }
+
+  public static void main(String[] args) {
+    TreeNode root = new TreeNode(5);
+    root.left = new TreeNode(3);
+    root.left.left = new TreeNode(1);
+    root.left.right = new TreeNode(4);
+    root.right = new TreeNode(8);
+    root.right.left = new TreeNode(7);
+    root.right.right = new TreeNode(10);
+    root.right.left.left = new TreeNode(15);
+    root.right.left.left.left = new TreeNode(20);
+
+    System.out.println(checkBalanced(root));
+  }
 }
 
 /*

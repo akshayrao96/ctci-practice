@@ -35,7 +35,7 @@ public class Question {
     String str = "Mr John Smith    ";
     String str2 = "L o o kingGoo d        ";
     String str3 = "L o o kingGoo d";
-        //L%20o%20o%20kingGoo%20d
+    //L%20o%20o%20kingGoo%20d
     char[] arr = str.toCharArray();
     char[] arr2 = str2.toCharArray();
 
