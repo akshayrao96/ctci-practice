@@ -1,7 +1,6 @@
 package successor;
 
 import CtCILibrary.CtCILibrary.TreeNode;
-import node.BinaryTreeNode;
 
 public class Question {
 
@@ -14,12 +13,16 @@ public class Question {
       root = parent;
       parent = parent.parent;
     }
-    if (parent == null) return new TreeNode(-1);
+    if (parent == null) {
+      return new TreeNode(-1);
+    }
     return parent;
   }
 
   private static TreeNode findMin(TreeNode root) {
-    if (root.left == null) return root;
+    if (root.left == null) {
+      return root;
+    }
     return findMin(root.left);
   }
 
@@ -70,18 +73,3 @@ public class Question {
 
   }
 }
-
-/*
-Find successor of node in BST
-
-If node has right child, find min
-
-  If node does not have right child
-    Must be parent root is left child of parent
-    Otherwise, recurse up till we find parent of the left child
-    If we are at parent, then return null (no successor)
-
-
-
-
- */
