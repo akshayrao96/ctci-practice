@@ -32,4 +32,8 @@ public abstract class Graph<T> {
     }
     throw new IllegalArgumentException();
   }
+
+  public LinkedList<LinkedList<T>> getNodes() {
+    return nodes;
+  }
 }
