@@ -1,24 +1,22 @@
 package checkPermutation;
 
-import java.util.HashMap;
-
 public class Question {
 
   public static boolean checkPermutation(String s, String a) {
-    HashMap<Character, Integer> freq = new HashMap<>();
-    for (char letter : s.toCharArray()) {
-      if (freq.containsKey(letter)) {
-        freq.put(letter, freq.get(letter) + 1);
-      } else {
-        freq.put(letter, 1);
-      }
+    if (s.length() != a.length()) {
+      return false;
     }
-    for (char letter : a.toCharArray()) {
-      if (!freq.containsKey(letter)) {
-        return false;
-      }
-      freq.put(letter, freq.get(letter) - 1);
-      if (freq.get(letter) < 0) {
+    int[] count = new int[128];
+    for (int i = 0; i < s.length(); i++) {
+      char c = s.charAt(i);
+      count[c]++;
+    }
+    for (int j = 0; j < a.length(); j++) {
+      char c = a.charAt(j);
+      count[c]--;
+    }
+    for (int freq : count) {
+      if (freq != 0) {
         return false;
       }
     }

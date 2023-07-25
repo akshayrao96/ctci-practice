@@ -15,6 +15,24 @@ package urlify;
 
 public class Question {
 
+  public static char[] urlify2(char[] string, int strLength) {
+    int index = strLength - 1;
+    int inputIndex = string.length - 1;
+    for (int i = index; i >= 0; i--) {
+      if (string[i] != ' ') {
+        string[inputIndex] = string[i];
+      } else {
+        inputIndex -= 2;
+        string[inputIndex] = '%';
+        string[inputIndex + 1] = '2';
+        string[inputIndex + 2] = '0';
+      }
+      inputIndex -= 1;
+    }
+    return string;
+  }
+
+
   public static char[] urlify(char[] string, int strLength) {
     int counter = 0;
     for (int i = strLength - 1; i >= 0; i--) {
@@ -41,6 +59,10 @@ public class Question {
 
     System.out.println(urlify(arr, 13));
     System.out.println(urlify(arr2, str3.length()));
+
+    char[] a = urlify(arr2, str3.length());
+    char[] b = urlify2(arr2, str3.length());
+
   }
 }
 

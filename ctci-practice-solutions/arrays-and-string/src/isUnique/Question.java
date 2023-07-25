@@ -6,13 +6,11 @@ import java.util.HashSet;
 public class Question {
 
   public static boolean isUnique(String s) {
-    HashSet<Character> freq = new HashSet<>();
+    boolean[] found = new boolean[128];
     for (int i = 0; i < s.length(); i++) {
-      if (freq.contains(s.charAt(i))) {
-        return false;
-      } else {
-        freq.add(s.charAt(i));
-      }
+      char c = s.charAt(i);
+      if (found[c]) return false;
+      found[c] = true;
     }
     return true;
   }
