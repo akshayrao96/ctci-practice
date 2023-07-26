@@ -7,7 +7,48 @@ import java.util.List;
 
 public class Question {
 
+  /*
+  have another 2d array, initialize everything to false
+  when 0 found, make row and column true
+  change original matrix
+  [i][j] = [0][0], [0][1], [0][2]
+  if matrix[i][j] = 0, then change boolean row and column to true
+
+  col = [i]
+  row = [j]
+
+   */
+
   public static void zeroMatrix(int[][] matrix) {
+    if (matrix.length == 0) return;
+    boolean[][] zero = new boolean[matrix.length][matrix[0].length];
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[0].length; j++) {
+        if (matrix[i][j] == 0) {
+          changeZero(zero, i, j);
+        }
+      }
+    }
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[0].length; j++) {
+        if (zero[i][j]) {
+          matrix[i][j] = 0;
+        }
+      }
+    }
+  }
+
+  public static void changeZero(boolean[][] zero, int i, int j) {
+    for (int k = 0; k < zero[0].length; k++) {
+      zero[i][k] = true;
+    }
+    for (int k = 0; k < zero.length; k++) {
+      zero[k][j] = true;
+    }
+  }
+
+
+  public static void zeroMatrix2(int[][] matrix) {
     List<int[]> zero = new ArrayList<>();
     for (int i = 0; i < matrix.length; i++) {
       for (int j = 0; j < matrix[i].length; j++) {
@@ -51,9 +92,9 @@ public class Question {
   }
 
   public static void main(String[] args) {
-    int nrows = 10;
-    int ncols = 20;
-    int[][] matrix1 = AssortedMethods.randomMatrix(nrows, ncols, -10, 10);
+    int nrows = 6;
+    int ncols = 6;
+    int[][] matrix1 = AssortedMethods.randomMatrix(nrows, ncols, 0, 6);
     int[][] matrix2 = cloneMatrix(matrix1);
 
     AssortedMethods.printMatrix(matrix1);
