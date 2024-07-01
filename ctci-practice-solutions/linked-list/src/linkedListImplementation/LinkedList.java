@@ -2,10 +2,10 @@ package linkedListImplementation;
 
 public class LinkedList<E> {
 
-  private static class Node<E> {
+  public static class Node<E> {
 
-    protected E data;
-    protected Node<E> next;
+    public E data;
+    public Node<E> next;
 
     public Node(E data, Node<E> next) {
       this.data = data;
@@ -14,7 +14,7 @@ public class LinkedList<E> {
   }
 
   private int size;
-  private Node<E> head;
+  public Node<E> head;
 
   public LinkedList() {
     this.size = 0;
@@ -64,6 +64,10 @@ public class LinkedList<E> {
       prev = curr;
       curr = curr.next;
     }
+  }
+
+  public Node<E> ListNode() {
+    return this.head;
   }
 
   public boolean isEmpty() {

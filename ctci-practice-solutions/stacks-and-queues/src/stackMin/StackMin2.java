@@ -40,5 +40,10 @@ public class StackMin2 extends MyStack<Integer> {
       stack.push(i);
     }
     System.out.println(stack.min()); // 1
+
+    for (int i = 0; i < 7; i++) {
+      stack.pop();
+    }
+    System.out.println(stack.min()); // 2
   }
 }
