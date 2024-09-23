@@ -67,3 +67,41 @@ public class RadixSort {
     System.out.println(Arrays.toString(arr));
   }
 }
+
+/*
+
+[324, 23, 67]
+
+get the divide = 10 to get last digit
+
+% divide to insert last digit into a bucket array count
+
+[0,0,0,1,1,0,0,1,0,0]
+
+increment total count in the array count
+
+[0,0,0,1,2,2,2,2,3,3]
+
+Starting from back of the array, get the index it is in
+put it in an aux array
+
+67 = 7's index
+
+[23,324,67]
+
+now divide *= 10, repeat
+
+[0,0,1,1,0,0,1,0,0,0]
+[0,0,1,2,2,2,2,3,3,3]
+
+[23, 324, 67]
+
+[2,0,0,1,0,0,0,0,0,0]
+[2,2,2,3,2,2,2,3,3,3]
+
+[23,67,324]
+
+
+
+
+ */
