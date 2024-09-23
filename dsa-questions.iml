@@ -12,6 +12,8 @@
       <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/recursion/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/UnionFind/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/stable-matching/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/binary-search/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/segment-tree/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
