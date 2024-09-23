@@ -4,6 +4,16 @@ import java.util.Arrays;
 
 public class RadixSort {
 
+  public static int[] sort(int[] arr) {
+    int[] res = new int[arr.length];
+    int i = 0;
+    for (int num : arr) {
+      res[i++] = num;
+    }
+    radixSort(res);
+    return res;
+  }
+
   public static void radixSort(int[] arr) {
     if (arr.length == 0) {
       return;
