@@ -3,17 +3,17 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/arrays-and-string/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/linked-list/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/heap/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/stacks-and-queues/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/trees-and-graphs/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/sorting/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/recursion/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/UnionFind/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/stable-matching/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/binary-search/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ctci-practice-solutions/segment-tree/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/arrays-and-string/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/binary-search/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/heap/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/linked-list/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/recursion/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/segment-tree/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/sorting/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/stable-matching/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/stacks-and-queues/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/trees-and-graphs/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/all-dsa-questions/union-find/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
